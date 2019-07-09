@@ -6,4 +6,4 @@ before_install:
  - docker build -t arpita/docker-react -f Dockerfile.dev .
 
 script:
- - docker run arpita/docker-react npm run test -- --coverage
+ - docker run -e CI=true arpita/docker-react npm run test
